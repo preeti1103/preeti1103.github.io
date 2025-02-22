@@ -1,0 +1,59 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #35424a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    color: #35424a;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px auto;
+    background: white;
+    border-radius: 5px;
+    max-width: 800px;
+}
+
+.project {
+    margin: 10px 0;
+}
+
+.project h3 {
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #35424a;
+    color: white;
+}
