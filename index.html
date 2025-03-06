@@ -17,8 +17,15 @@
             color: #333;
         }
 
+        /* Lavender Theme */
+        :root {
+            --lavender: #967bb6;
+            --dark-lavender: #6a1b9a;
+            --light-lavender: #b39ddb;
+        }
+
         #home {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            background: linear-gradient(135deg, var(--lavender), var(--light-lavender));
             color: white;
             min-height: 100vh;
             display: flex;
@@ -37,7 +44,7 @@
 
         .section-title {
             font-weight: 600;
-            color: #6a11cb;
+            color: var(--dark-lavender);
             margin-bottom: 2rem;
         }
 
@@ -55,7 +62,7 @@
         }
 
         #contact {
-            background: #6a11cb;
+            background: var(--dark-lavender);
             color: white;
             padding: 50px 0;
         }
@@ -68,11 +75,11 @@
         }
 
         .nav-link {
-            color: #6a11cb !important;
+            color: var(--dark-lavender) !important;
         }
 
         .nav-link:hover {
-            color: #4a148c !important;
+            color: var(--lavender) !important;
         }
     </style>
 </head>
