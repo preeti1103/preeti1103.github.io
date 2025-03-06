@@ -5,13 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Preeti Lokhande - Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
-    h1, h2 { color: #333; }
-    a { color: #0077b5; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .section { margin-bottom: 30px; }
-    .skills-list, .experience-list, .project-list { list-style-type: none; padding: 0; }
-    .skills-list li, .experience-list li, .project-list li { margin-bottom: 10px; }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #0077b5;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 5px 0;
+      font-size: 1.1rem;
+    }
+    header a {
+      color: #fff;
+      text-decoration: none;
+    }
+    header a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .profile-photo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .profile-photo img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #0077b5;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section h2 {
+      color: #0077b5;
+      border-bottom: 2px solid #0077b5;
+      padding-bottom: 5px;
+      font-size: 1.8rem;
+    }
+    .skills-list, .experience-list, .project-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .skills-list li, .experience-list li, .project-list li {
+      background: #f9f9f9;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-left: 4px solid #0077b5;
+    }
+    .skills-list li:hover, .experience-list li:hover, .project-list li:hover {
+      background: #e9e9e9;
+    }
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background: #0077b5;
+      color: #fff;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -21,77 +89,87 @@
     <p>📧 <a href="mailto:preetilokhande999@gmail.com">preetilokhande999@gmail.com</a> | 📞 +1 682-406-8938 | <a href="https://www.linkedin.com/in/preeti-lokhande">LinkedIn</a></p>
   </header>
 
-  <section class="section">
-    <h2>About Me</h2>
-    <p>I am a passionate and detail-oriented Data Analyst with a strong foundation in data analytics, cloud computing, and database management. Currently pursuing a Master’s in Information Systems at the University of Texas at Arlington, I bring hands-on experience in data visualization, predictive modeling, and inventory optimization. My goal is to leverage data-driven insights to solve complex business problems and contribute to organizational growth.</p>
-  </section>
+  <div class="container">
+    <div class="profile-photo">
+      <img src="https://postimg.cc/3d7TFbnp" alt="Preeti Lokhande">
+    </div>
 
-  <section class="section">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>Master’s in Information Systems</strong> - University of Texas at Arlington, USA (Expected Graduation: May 2025)</li>
-      <li><strong>Bachelor of Engineering in Electronics and Telecommunication</strong> - Mahatma Gandhi Mission’s College of Engineering and Technology, India (Graduated: June 2021)</li>
-    </ul>
-  </section>
+    <section class="section">
+      <h2>About Me</h2>
+      <p>I am a passionate and detail-oriented Data Analyst with a strong foundation in data analytics, cloud computing, and database management. Currently pursuing a Master’s in Information Systems at the University of Texas at Arlington, I bring hands-on experience in data visualization, predictive modeling, and inventory optimization. My goal is to leverage data-driven insights to solve complex business problems and contribute to organizational growth.</p>
+    </section>
 
-  <section class="section">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li><strong>Programming:</strong> Python, R, Node.js</li>
-      <li><strong>Databases:</strong> SQL, MySQL, Oracle, PostgreSQL, Microsoft Access</li>
-      <li><strong>Cloud Platforms:</strong> AWS, Azure, Google Cloud Platform (GCP)</li>
-      <li><strong>Data Tools:</strong> Power BI, Tableau, Matplotlib, Pandas, Jupyter</li>
-      <li><strong>ETL Tools:</strong> Data extraction, transformation, loading (ETL)</li>
-      <li><strong>Data Warehousing:</strong> Data modeling, data governance, metadata management</li>
-      <li><strong>DevOps:</strong> Docker, Kubernetes, Git, GitHub, CI/CD pipelines</li>
-      <li><strong>Agile & Project Management:</strong> Scrum, Jira, Confluence, Agile methodologies</li>
-    </ul>
-  </section>
+    <section class="section">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Master’s in Information Systems</strong> - University of Texas at Arlington, USA (Expected Graduation: May 2025)</li>
+        <li><strong>Bachelor of Engineering in Electronics and Telecommunication</strong> - Mahatma Gandhi Mission’s College of Engineering and Technology, India (Graduated: June 2021)</li>
+      </ul>
+    </section>
 
-  <section class="section">
-    <h2>Experience</h2>
-    <ul class="experience-list">
-      <li>
-        <strong>Inventory and Sales Analyst</strong> - Chartwells (Marketplace), USA (Start Date – Present)
-        <ul>
-          <li>Track and analyze daily inventory levels and sales data to identify trends, reducing waste by 15%.</li>
-          <li>Generate weekly and monthly sales reports using Excel, highlighting key performance metrics.</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Data Analyst Intern</strong> - Doordarshan Kendra, India (June 2021 – August 2021)
-        <ul>
-          <li>Cleaned and organized datasets in Excel, ensuring data accuracy and consistency.</li>
-          <li>Performed basic data analysis tasks, such as calculating averages and trends.</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
+    <section class="section">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><strong>Programming:</strong> Python, R, Node.js</li>
+        <li><strong>Databases:</strong> SQL, MySQL, Oracle, PostgreSQL, Microsoft Access</li>
+        <li><strong>Cloud Platforms:</strong> AWS, Azure, Google Cloud Platform (GCP)</li>
+        <li><strong>Data Tools:</strong> Power BI, Tableau, Matplotlib, Pandas, Jupyter</li>
+        <li><strong>ETL Tools:</strong> Data extraction, transformation, loading (ETL)</li>
+        <li><strong>Data Warehousing:</strong> Data modeling, data governance, metadata management</li>
+        <li><strong>DevOps:</strong> Docker, Kubernetes, Git, GitHub, CI/CD pipelines</li>
+        <li><strong>Agile & Project Management:</strong> Scrum, Jira, Confluence, Agile methodologies</li>
+      </ul>
+    </section>
 
-  <section class="section">
-    <h2>Projects</h2>
-    <ul class="project-list">
-      <li>
-        <strong>Predicting Viable Loan Applicants for Enhanced Secondary Approvals</strong>
-        <ul>
-          <li>Predicted approval likelihood for Tier 2 companies using logistic regression, achieving 90% model accuracy.</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Ridge Regression Modeling for Wine Consumption Prediction</strong>
-        <ul>
-          <li>Predicted wine consumption trends using Ridge Regression in R, improving prediction accuracy by 12%.</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
+    <section class="section">
+      <h2>Experience</h2>
+      <ul class="experience-list">
+        <li>
+          <strong>Inventory and Sales Analyst</strong> - Chartwells (Marketplace), USA (Start Date – Present)
+          <ul>
+            <li>Track and analyze daily inventory levels and sales data to identify trends, reducing waste by 15%.</li>
+            <li>Generate weekly and monthly sales reports using Excel, highlighting key performance metrics.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Data Analyst Intern</strong> - Doordarshan Kendra, India (June 2021 – August 2021)
+          <ul>
+            <li>Cleaned and organized datasets in Excel, ensuring data accuracy and consistency.</li>
+            <li>Performed basic data analysis tasks, such as calculating averages and trends.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
 
-  <section class="section">
-    <h2>Certifications</h2>
-    <ul>
-      <li>AWS Cloud Practitioner (Planned Exam Date: [Insert Date])</li>
-      <li>Data Analysis with Python – IBM Skills Network (Nov 2022)</li>
-    </ul>
-  </section>
+    <section class="section">
+      <h2>Projects</h2>
+      <ul class="project-list">
+        <li>
+          <strong>Predicting Viable Loan Applicants for Enhanced Secondary Approvals</strong>
+          <ul>
+            <li>Predicted approval likelihood for Tier 2 companies using logistic regression, achieving 90% model accuracy.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Ridge Regression Modeling for Wine Consumption Prediction</strong>
+          <ul>
+            <li>Predicted wine consumption trends using Ridge Regression in R, improving prediction accuracy by 12%.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>AWS Cloud Practitioner (Planned Exam Date: [Insert Date])</li>
+        <li>Data Analysis with Python – IBM Skills Network (Nov 2022)</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2023 Preeti Lokhande. All rights reserved.
+  </footer>
 </body>
 </html>
