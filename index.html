@@ -24,6 +24,17 @@
             --light-lavender: #b39ddb;
         }
 
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Home Section */
         #home {
             background: linear-gradient(135deg, var(--lavender), var(--light-lavender));
             color: white;
@@ -40,14 +51,22 @@
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid white;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
+        .home-content {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Section Titles */
         .section-title {
             font-weight: 600;
             color: var(--dark-lavender);
             margin-bottom: 2rem;
+            animation: fadeIn 1s ease-in-out;
         }
 
+        /* Skill Cards */
         .skill-card {
             background: white;
             border: 1px solid #e0e0e0;
@@ -61,17 +80,30 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
+        /* Contact Section */
         #contact {
             background: var(--dark-lavender);
             color: white;
             padding: 50px 0;
         }
 
+        /* Footer */
         footer {
             background: #333;
             color: white;
             padding: 20px 0;
             text-align: center;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: white !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            color: var(--dark-lavender) !important;
         }
 
         .nav-link {
@@ -85,7 +117,7 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">Preeti Lokhande</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,7 +129,6 @@
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -108,9 +139,12 @@
     <section id="home">
         <div class="container text-center">
             <img src="https://i.postimg.cc/ZKv5ZGNf/Whats-App-Image-2025-03-05-at-21-33-51-777943f8.jpg" alt="Profile" class="profile-img mb-4">
-            <h1 class="display-4">Preeti Lokhande</h1>
-            <p class="lead">Data Analyst | Cloud Enthusiast</p>
-            <p class="lead">Master’s in Information Systems, University of Texas at Arlington</p>
+            <div class="home-content">
+                <h1 class="display-4 fade-in">Preeti Lokhande</h1>
+                <p class="lead fade-in">Data Analyst | Cloud Enthusiast</p>
+                <p class="lead fade-in">Master’s in Information Systems, University of Texas at Arlington</p>
+                <a href="#about" class="btn btn-light btn-lg fade-in">Learn More</a>
+            </div>
         </div>
     </section>
 
@@ -120,7 +154,7 @@
             <h2 class="section-title text-center">Education</h2>
             <div class="row">
                 <div class="col-md-6 mx-auto">
-                    <div class="skill-card">
+                    <div class="skill-card fade-in">
                         <h5>Master’s in Information Systems</h5>
                         <p>University of Texas at Arlington, USA</p>
                         <p><strong>Expected Graduation:</strong> May 2025</p>
@@ -128,7 +162,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 mx-auto">
-                    <div class="skill-card">
+                    <div class="skill-card fade-in">
                         <h5>Bachelor of Engineering in Electronics and Telecommunications</h5>
                         <p>Mumbai University, Mumbai, India</p>
                         <p><strong>Graduated:</strong> June 2021</p>
@@ -144,31 +178,31 @@
             <h2 class="section-title text-center">Skills</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="skill-card">
+                    <div class="skill-card fade-in">
                         <h5>Languages</h5>
                         <p>Python, SQL, MATLAB</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="skill-card">
+                    <div class="skill-card fade-in">
                         <h5>Databases</h5>
                         <p>MySQL, SQL Server, MongoDB</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="skill-card">
+                    <div class="skill-card fade-in">
                         <h5>Office Suite</h5>
                         <p>Excel, Word, PowerPoint, Access, Visio, Outlook</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="skill-card">
+                    <div class="skill-card fade-in">
                         <h5>Analytical Tools</h5>
                         <p>Tableau, Power BI, Excel</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="skill-card">
+                    <div class="skill-card fade-in">
                         <h5>Other Tools</h5>
                         <p>Git, Jupyter Notebook, Power Query</p>
                     </div>
@@ -183,29 +217,24 @@
             <h2 class="section-title text-center">Experience</h2>
             <div class="row g-4">
                 <div class="col-md-6">
-                    <div class="skill-card">
+                    <div class="skill-card fade-in">
                         <h5>Analyst</h5>
                         <p><strong>Chartwells Higher Education - Arlington, TX, USA</strong></p>
                         <p><strong>Jan 2024 - Present</strong></p>
                         <ul>
                             <li>Tracked and analyzed daily inventory levels and sales data for over 2,000 SKUs, reducing waste by 15% and stockouts by 12%, enhancing product availability and customer satisfaction.</li>
                             <li>Generated comprehensive weekly and monthly sales reports and dashboards in Excel, clearly highlighting key performance metrics and inventory trends for management.</li>
-                            <li>Conducted regular cycle counts and reconciled discrepancies, achieving 98% inventory accuracy, minimizing carrying costs, and streamlining operational efficiency.</li>
-                            <li>Identified inefficiencies in inventory management and analyzed sales data to pinpoint customer buying patterns and slow-moving items, contributing to targeted marketing strategies and a 15% reduction in excess inventory costs.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="skill-card">
+                    <div class="skill-card fade-in">
                         <h5>Data Analyst Intern</h5>
                         <p><strong>Doordarshan Kendra, Mumbai, India</strong></p>
                         <p><strong>Jun 2022 - Aug 2023</strong></p>
                         <ul>
                             <li>Developed dashboards to monitor and analyze TV viewership metrics using Excel and Microsoft Power BI, supporting broadcasters in improving their decision-making processes for over 5 TV stations.</li>
                             <li>Managed a centralized database integrating datasets from 8 TV stations; implemented secure, role-based access controls, enhancing data security and compliance.</li>
-                            <li>Performed data cleaning and standardization on datasets containing over 50,000 records using Excel and Power Query, ensuring high accuracy and consistency for analysis.</li>
-                            <li>Assisted in streamlining database management processes, contributing to a 15% improvement in data handling efficiency.</li>
-                            <li>Supported broadcasters by assisting in the setup of analytics tools (Google Analytics, Excel, Power BI), improving data tracking and reporting workflow efficiency by approximately 20%.</li>
                         </ul>
                     </div>
                 </div>
@@ -219,62 +248,17 @@
             <h2 class="section-title text-center">Projects</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="skill-card">
-                        <h5>Predicting Viable Loan Applicants for Enhanced Secondary Approvals</h5>
-                        <ul>
-                            <li>Predicted approval likelihood for Tier 2 companies using logistic regression (90% accuracy).</li>
-                            <li>Applied multiple regression analysis to assess loan amounts based on income and credit history.</li>
-                            <li>Implemented data cleaning, feature encoding, and scaling to enhance model performance.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-card">
-                        <h5>Sales Forecasting and Inventory Optimization</h5>
-                        <ul>
-                            <li>Developed a sales forecasting model using Python, achieving 95% accuracy in predicting future sales.</li>
-                            <li>Designed an inventory optimization system to calculate reorder points, safety stock, and reduce inventory costs by 15%.</li>
-                            <li>Created an interactive dashboard in Power BI to visualize sales trends and inventory levels.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-card">
-                        <h5>Supply Chain and Inventory Analysis Using SQL and Excel</h5>
-                        <ul>
-                            <li>Conducted end-to-end analysis of e-commerce data to identify inventory and supply chain inefficiencies.</li>
-                            <li>Wrote complex SQL queries to calculate turnover, analyze lead times, and segment customers.</li>
-                            <li>Designed interactive Excel dashboards to visualize stockout rates, sales trends, and supplier performance.</li>
-                            <li>Delivered insights to reduce overstocking by 15% and improve lead times by 20%.</li>
-                        </ul>
+                    <div class="skill-card fade-in">
+                        <h5>Supply Chain and Inventory Optimization Analysis</h5>
+                        <p>Analyzed e-commerce data using SQL and Excel to optimize inventory and improve supply chain efficiency.</p>
                         <a href="https://github.com/preeti1103/Supply-Chain-Inventory-Analysis" class="btn btn-primary" target="_blank">View on GitHub</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center">Certifications</h2>
-            <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="skill-card">
-                        <h5>Data Analysis with Python</h5>
-                        <p>IBM Skills Network</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-card">
-                        <h5>Excel Basics for Data Analysis</h5>
-                        <p>IBM Skills Network</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-card">
-                        <h5>Data Visualization with Excel and Cognos</h5>
-                        <p>IBM Skills Network</p>
+                    <div class="skill-card fade-in">
+                        <h5>Sales Forecasting and Inventory Optimization</h5>
+                        <p>Developed a sales forecasting model using Python, achieving 95% accuracy in predicting future sales.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
                     </div>
                 </div>
             </div>
