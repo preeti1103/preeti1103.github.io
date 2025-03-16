@@ -30,14 +30,39 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes popIn {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         .fade-in {
             opacity: 0;
             animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            animation: slideInLeft 1s ease-in-out forwards;
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            animation: slideInRight 1s ease-in-out forwards;
+        }
+
+        .zoom-in {
+            opacity: 0;
+            animation: zoomIn 1s ease-in-out forwards;
         }
 
         .animate-delay-1 {
@@ -46,16 +71,6 @@
 
         .animate-delay-2 {
             animation-delay: 1s;
-        }
-
-        /* Box Styling */
-        .box {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            animation: popIn 0.5s ease-in-out forwards;
         }
 
         /* Home Section */
@@ -83,7 +98,17 @@
         }
 
         .home-content p {
+            font-size: 1.5rem;
             animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        /* Section Styling */
+        .section-box {
+            background: rgba(150, 123, 182, 0.1); /* Lavender with transparency */
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         /* About Section */
@@ -91,8 +116,8 @@
             padding: 80px 0;
         }
 
-        #about .box {
-            text-align: justify;
+        #about .section-box {
+            animation: slideInLeft 1s ease-in-out forwards;
         }
 
         /* Skills Section */
@@ -101,19 +126,13 @@
             background: #f9f9f9;
         }
 
+        #skills .section-box {
+            animation: slideInRight 1s ease-in-out forwards;
+        }
+
         .skill-item {
             text-align: center;
             margin-bottom: 20px;
-            opacity: 0;
-        }
-
-        .skill-item .box {
-            padding: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .skill-item .box:hover {
-            transform: translateY(-5px);
         }
 
         .skill-item img {
@@ -132,8 +151,8 @@
             padding: 80px 0;
         }
 
-        .education-item .box {
-            color: #333; /* Black text */
+        #education .section-box {
+            animation: zoomIn 1s ease-in-out forwards;
         }
 
         /* Experience Section */
@@ -142,8 +161,8 @@
             background: #f9f9f9;
         }
 
-        .experience-item .box {
-            padding: 20px;
+        #experience .section-box {
+            animation: slideInLeft 1s ease-in-out forwards;
         }
 
         /* Projects Section */
@@ -151,8 +170,8 @@
             padding: 80px 0;
         }
 
-        .project-item .box {
-            padding: 20px;
+        #projects .section-box {
+            animation: slideInRight 1s ease-in-out forwards;
         }
 
         /* Certifications Section */
@@ -161,8 +180,8 @@
             background: #f9f9f9;
         }
 
-        .certification-item .box {
-            padding: 20px;
+        #certifications .section-box {
+            animation: zoomIn 1s ease-in-out forwards;
         }
 
         /* Footer */
@@ -212,7 +231,7 @@
             <h2 class="section-title text-center">About Me</h2>
             <div class="row">
                 <div class="col-md-8 mx-auto">
-                    <div class="box fade-in">
+                    <div class="section-box">
                         <p>Hello! I’m Preeti Lokhande, a passionate and detail-oriented Data Analyst currently pursuing my Master of Science in Information Systems at the University of Texas at Arlington. I specialize in transforming complex datasets into actionable insights that drive business success.</p>
                         <p>With a strong foundation in Python, SQL, Tableau, and Power BI, I bring a blend of analytical skills and technical expertise to every project. My experience includes working as an Analyst at Chartwells Higher Education, where I streamlined inventory processes, improved stock accuracy, and developed insightful dashboards to support data-driven decision-making. Previously, during my internship at Doordarshan Kendra in Mumbai, I enhanced data handling efficiency and built analytical tools to support broadcasters' strategies.</p>
                         <p>Throughout my academic journey, I’ve led multiple projects focused on sales forecasting, inventory optimization, and loan approval predictions, applying machine learning techniques and data visualization tools to solve real-world business problems.</p>
@@ -230,48 +249,48 @@
             <div class="row g-4">
                 <!-- Row 1 -->
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python">
                             <p>Python</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/sql.png" alt="SQL">
                             <p>SQL</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/matlab.png" alt="MATLAB">
                             <p>MATLAB</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/mysql.png" alt="MySQL">
                             <p>MySQL</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/microsoft-sql-server.png" alt="SQL Server">
                             <p>SQL Server</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB">
                             <p>MongoDB</p>
                         </div>
@@ -279,48 +298,48 @@
                 </div>
                 <!-- Row 2 -->
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/ms-excel.png" alt="Excel">
                             <p>Excel</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/ms-word.png" alt="Word">
                             <p>Word</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/powerpoint.png" alt="PowerPoint">
                             <p>PowerPoint</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/ms-access.png" alt="Access">
                             <p>Access</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/visio.png" alt="Visio">
                             <p>Visio</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/outlook.png" alt="Outlook">
                             <p>Outlook</p>
                         </div>
@@ -328,40 +347,40 @@
                 </div>
                 <!-- Row 3 -->
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/tableau-software.png" alt="Tableau">
                             <p>Tableau</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="Power BI">
                             <p>Power BI</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git">
                             <p>Git</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/jupyter.png" alt="Jupyter Notebook">
                             <p>Jupyter Notebook</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item fade-in">
-                        <div class="box">
+                    <div class="skill-item">
+                        <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/power-query.png" alt="Power Query">
                             <p>Power Query</p>
                         </div>
@@ -377,23 +396,19 @@
             <h2 class="section-title text-center">Education</h2>
             <div class="row">
                 <div class="col-md-6 mx-auto">
-                    <div class="education-item fade-in">
-                        <div class="box">
-                            <h5><strong>Master’s in Information Systems</strong></h5>
-                            <p><strong>University of Texas at Arlington, USA</strong></p>
-                            <p><strong>Expected Graduation:</strong> May 2025</p>
-                            <p><strong>Relevant Coursework:</strong> Data Mining, Applied Database Management, Python Programming, Data Warehousing, Analysis & Design, Advanced Methods for Analytics, Cloud Computing, Project Management, Information Technology Management</p>
-                        </div>
+                    <div class="section-box">
+                        <h5><strong>Master’s in Information Systems</strong></h5>
+                        <p><strong>University of Texas at Arlington, USA</strong></p>
+                        <p><strong>Expected Graduation:</strong> May 2025</p>
+                        <p><strong>Relevant Coursework:</strong> Data Mining, Applied Database Management, Python Programming, Data Warehousing, Analysis & Design, Advanced Methods for Analytics, Cloud Computing, Project Management, Information Technology Management</p>
                     </div>
                 </div>
                 <div class="col-md-6 mx-auto">
-                    <div class="education-item fade-in animate-delay-1">
-                        <div class="box">
-                            <h5><strong>Bachelor of Engineering in Electronics and Telecommunications</strong></h5>
-                            <p><strong>Mumbai University, Mumbai, India</strong></p>
-                            <p><strong>Graduated:</strong> June 2021</p>
-                            <p><strong>Relevant Coursework:</strong> Digital system and design, Network communication, database management, python</p>
-                        </div>
+                    <div class="section-box">
+                        <h5><strong>Bachelor of Engineering in Electronics and Telecommunications</strong></h5>
+                        <p><strong>Mumbai University, Mumbai, India</strong></p>
+                        <p><strong>Graduated:</strong> June 2021</p>
+                        <p><strong>Relevant Coursework:</strong> Digital system and design, Network communication, database management, python</p>
                     </div>
                 </div>
             </div>
@@ -406,34 +421,30 @@
             <h2 class="section-title text-center">Experience</h2>
             <div class="row g-4">
                 <div class="col-md-6">
-                    <div class="experience-item fade-in">
-                        <div class="box">
-                            <h5>Analyst</h5>
-                            <p><strong>Chartwells Higher Education - Arlington, TX, USA</strong></p>
-                            <p><strong>Jan 2024 - Present</strong></p>
-                            <ul>
-                                <li>Tracked and analyzed daily inventory levels and sales data for over 2,000 SKUs, reducing waste by 15% and stockouts by 12%, enhancing product availability and customer satisfaction.</li>
-                                <li>Generated comprehensive weekly and monthly sales reports and dashboards in Excel, clearly highlighting key performance metrics and inventory trends for management.</li>
-                                <li>Conducted regular cycle counts and reconciled discrepancies, achieving 98% inventory accuracy, minimizing carrying costs, and streamlining operational efficiency.</li>
-                                <li>Identified inefficiencies in inventory management and analyzed sales data to pinpoint customer buying patterns and slow-moving items, contributing to targeted marketing strategies and a 15% reduction in excess inventory costs.</li>
-                            </ul>
-                        </div>
+                    <div class="section-box">
+                        <h5>Analyst</h5>
+                        <p><strong>Chartwells Higher Education - Arlington, TX, USA</strong></p>
+                        <p><strong>Jan 2024 - Present</strong></p>
+                        <ul>
+                            <li>Tracked and analyzed daily inventory levels and sales data for over 2,000 SKUs, reducing waste by 15% and stockouts by 12%, enhancing product availability and customer satisfaction.</li>
+                            <li>Generated comprehensive weekly and monthly sales reports and dashboards in Excel, clearly highlighting key performance metrics and inventory trends for management.</li>
+                            <li>Conducted regular cycle counts and reconciled discrepancies, achieving 98% inventory accuracy, minimizing carrying costs, and streamlining operational efficiency.</li>
+                            <li>Identified inefficiencies in inventory management and analyzed sales data to pinpoint customer buying patterns and slow-moving items, contributing to targeted marketing strategies and a 15% reduction in excess inventory costs.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="experience-item fade-in animate-delay-1">
-                        <div class="box">
-                            <h5>Data Analyst Intern</h5>
-                            <p><strong>Doordarshan Kendra, Mumbai, India</strong></p>
-                            <p><strong>Jun 2022 - Aug 2023</strong></p>
-                            <ul>
-                                <li>Developed dashboards to monitor and analyze TV viewership metrics using Excel and Microsoft Power BI, supporting broadcasters in improving their decision-making processes for over 5 TV stations.</li>
-                                <li>Managed a centralized database integrating datasets from 8 TV stations; implemented secure, role-based access controls, enhancing data security and compliance.</li>
-                                <li>Performed data cleaning and standardization on datasets containing over 50,000 records using Excel and Power Query, ensuring high accuracy and consistency for analysis.</li>
-                                <li>Assisted in streamlining database management processes, contributing to a 15% improvement in data handling efficiency.</li>
-                                <li>Supported broadcasters by assisting in the setup of analytics tools (Google Analytics, Excel, Power BI), improving data tracking and reporting workflow efficiency by approximately 20%.</li>
-                            </ul>
-                        </div>
+                    <div class="section-box">
+                        <h5>Data Analyst Intern</h5>
+                        <p><strong>Doordarshan Kendra, Mumbai, India</strong></p>
+                        <p><strong>Jun 2022 - Aug 2023</strong></p>
+                        <ul>
+                            <li>Developed dashboards to monitor and analyze TV viewership metrics using Excel and Microsoft Power BI, supporting broadcasters in improving their decision-making processes for over 5 TV stations.</li>
+                            <li>Managed a centralized database integrating datasets from 8 TV stations; implemented secure, role-based access controls, enhancing data security and compliance.</li>
+                            <li>Performed data cleaning and standardization on datasets containing over 50,000 records using Excel and Power Query, ensuring high accuracy and consistency for analysis.</li>
+                            <li>Assisted in streamlining database management processes, contributing to a 15% improvement in data handling efficiency.</li>
+                            <li>Supported broadcasters by assisting in the setup of analytics tools (Google Analytics, Excel, Power BI), improving data tracking and reporting workflow efficiency by approximately 20%.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -446,27 +457,21 @@
             <h2 class="section-title text-center">Projects</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="project-item fade-in">
-                        <div class="box">
-                            <h5>Predicting Viable Loan Applicants for Enhanced Secondary Approvals</h5>
-                            <p>Predicted approval likelihood for Tier 2 companies using logistic regression (90% accuracy). Applied multiple regression analysis to assess loan amounts based on income and credit history. Implemented data cleaning, feature encoding, and scaling to enhance model performance.</p>
-                        </div>
+                    <div class="section-box">
+                        <h5>Predicting Viable Loan Applicants for Enhanced Secondary Approvals</h5>
+                        <p>Predicted approval likelihood for Tier 2 companies using logistic regression (90% accuracy). Applied multiple regression analysis to assess loan amounts based on income and credit history. Implemented data cleaning, feature encoding, and scaling to enhance model performance.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="project-item fade-in animate-delay-1">
-                        <div class="box">
-                            <h5>Sales Forecasting and Inventory Optimization</h5>
-                            <p>Developed a sales forecasting model using Python, achieving 95% accuracy in predicting future sales. Designed an inventory optimization system to calculate reorder points, safety stock, and reduce inventory costs by 15%. Created an interactive dashboard in Power BI to visualize sales trends and inventory levels.</p>
-                        </div>
+                    <div class="section-box">
+                        <h5>Sales Forecasting and Inventory Optimization</h5>
+                        <p>Developed a sales forecasting model using Python, achieving 95% accuracy in predicting future sales. Designed an inventory optimization system to calculate reorder points, safety stock, and reduce inventory costs by 15%. Created an interactive dashboard in Power BI to visualize sales trends and inventory levels.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="project-item fade-in animate-delay-2">
-                        <div class="box">
-                            <h5>Supply Chain and Inventory Analysis Using SQL and Excel</h5>
-                            <p>Conducted end-to-end analysis of e-commerce data to identify inventory and supply chain inefficiencies. Wrote complex SQL queries to calculate turnover, analyze lead times, and segment customers. Designed interactive Excel dashboards to visualize stockout rates, sales trends, and supplier performance. Delivered insights to reduce overstocking by 15% and improve lead times by 20%.</p>
-                        </div>
+                    <div class="section-box">
+                        <h5>Supply Chain and Inventory Analysis Using SQL and Excel</h5>
+                        <p>Conducted end-to-end analysis of e-commerce data to identify inventory and supply chain inefficiencies. Wrote complex SQL queries to calculate turnover, analyze lead times, and segment customers. Designed interactive Excel dashboards to visualize stockout rates, sales trends, and supplier performance. Delivered insights to reduce overstocking by 15% and improve lead times by 20%.</p>
                     </div>
                 </div>
             </div>
@@ -479,27 +484,21 @@
             <h2 class="section-title text-center">Certifications</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="certification-item fade-in">
-                        <div class="box">
-                            <h5>Data Analysis with Python</h5>
-                            <p>IBM Skills Network</p>
-                        </div>
+                    <div class="section-box">
+                        <h5>Data Analysis with Python</h5>
+                        <p>IBM Skills Network</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="certification-item fade-in animate-delay-1">
-                        <div class="box">
-                            <h5>Excel Basics for Data Analysis</h5>
-                            <p>IBM Skills Network</p>
-                        </div>
+                    <div class="section-box">
+                        <h5>Excel Basics for Data Analysis</h5>
+                        <p>IBM Skills Network</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="certification-item fade-in animate-delay-2">
-                        <div class="box">
-                            <h5>Data Visualization with Excel and Cognos</h5>
-                            <p>IBM Skills Network</p>
-                        </div>
+                    <div class="section-box">
+                        <h5>Data Visualization with Excel and Cognos</h5>
+                        <p>IBM Skills Network</p>
                     </div>
                 </div>
             </div>
@@ -517,12 +516,12 @@
     <script>
         // Add scroll-triggered animations
         document.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('.fade-in');
+            const sections = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .zoom-in');
             sections.forEach(section => {
                 const sectionTop = section.getBoundingClientRect().top;
                 if (sectionTop < window.innerHeight * 0.8) {
                     section.style.opacity = 1;
-                    section.style.transform = 'translateY(0)';
+                    section.style.transform = 'translateY(0) translateX(0) scale(1)';
                 }
             });
         });
