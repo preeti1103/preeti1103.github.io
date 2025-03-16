@@ -30,39 +30,14 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        @keyframes zoomIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
+        @keyframes popIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
         .fade-in {
             opacity: 0;
             animation: fadeIn 1s ease-in-out forwards;
-        }
-
-        .slide-in-left {
-            opacity: 0;
-            animation: slideInLeft 1s ease-in-out forwards;
-        }
-
-        .slide-in-right {
-            opacity: 0;
-            animation: slideInRight 1s ease-in-out forwards;
-        }
-
-        .zoom-in {
-            opacity: 0;
-            animation: zoomIn 1s ease-in-out forwards;
         }
 
         .animate-delay-1 {
@@ -102,6 +77,11 @@
             animation: fadeIn 1.5s ease-in-out forwards;
         }
 
+        .home-content p.tagline {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
         /* Section Styling */
         .section-box {
             background: rgba(150, 123, 182, 0.1); /* Lavender with transparency */
@@ -109,6 +89,12 @@
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
 
         /* About Section */
@@ -117,7 +103,7 @@
         }
 
         #about .section-box {
-            animation: slideInLeft 1s ease-in-out forwards;
+            animation: fadeIn 1s ease-in-out forwards;
         }
 
         /* Skills Section */
@@ -127,7 +113,7 @@
         }
 
         #skills .section-box {
-            animation: slideInRight 1s ease-in-out forwards;
+            animation: fadeIn 1s ease-in-out forwards;
         }
 
         .skill-item {
@@ -152,7 +138,7 @@
         }
 
         #education .section-box {
-            animation: zoomIn 1s ease-in-out forwards;
+            animation: fadeIn 1s ease-in-out forwards;
         }
 
         /* Experience Section */
@@ -162,7 +148,7 @@
         }
 
         #experience .section-box {
-            animation: slideInLeft 1s ease-in-out forwards;
+            animation: fadeIn 1s ease-in-out forwards;
         }
 
         /* Projects Section */
@@ -171,7 +157,16 @@
         }
 
         #projects .section-box {
-            animation: slideInRight 1s ease-in-out forwards;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .project-item h5 {
+            font-weight: bold;
+        }
+
+        .project-item ul {
+            list-style-type: disc;
+            padding-left: 20px;
         }
 
         /* Certifications Section */
@@ -181,7 +176,27 @@
         }
 
         #certifications .section-box {
-            animation: zoomIn 1s ease-in-out forwards;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        /* Connect Section */
+        #connect {
+            padding: 80px 0;
+        }
+
+        #connect .section-box {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .connect-icons a {
+            color: var(--dark-lavender);
+            font-size: 2rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .connect-icons a:hover {
+            color: var(--lavender);
         }
 
         /* Footer */
@@ -209,6 +224,7 @@
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#connect">Connect</a></li>
                 </ul>
             </div>
         </div>
@@ -220,7 +236,8 @@
             <img src="https://i.postimg.cc/ZKv5ZGNf/Whats-App-Image-2025-03-05-at-21-33-51-777943f8.jpg" alt="Profile" class="profile-img mb-4">
             <div class="home-content">
                 <h1 class="display-4 fade-in">Preeti Lokhande</h1>
-                <p class="lead fade-in animate-delay-1">Analytical Problem Solver & Data Analyst | Expertise in Python, SQL, BI Tools | Turning Data into Decisions | MS Information Systems Graduate Student</p>
+                <p class="lead fade-in animate-delay-1">Analytical Problem Solver & Data Analyst | Expertise in Python, SQL, BI Tools | Turning Data into Decisions</p>
+                <p class="lead fade-in animate-delay-2 tagline">MS Information Systems Graduate Student</p>
             </div>
         </div>
     </section>
@@ -235,7 +252,6 @@
                         <p>Hello! I’m Preeti Lokhande, a passionate and detail-oriented Data Analyst currently pursuing my Master of Science in Information Systems at the University of Texas at Arlington. I specialize in transforming complex datasets into actionable insights that drive business success.</p>
                         <p>With a strong foundation in Python, SQL, Tableau, and Power BI, I bring a blend of analytical skills and technical expertise to every project. My experience includes working as an Analyst at Chartwells Higher Education, where I streamlined inventory processes, improved stock accuracy, and developed insightful dashboards to support data-driven decision-making. Previously, during my internship at Doordarshan Kendra in Mumbai, I enhanced data handling efficiency and built analytical tools to support broadcasters' strategies.</p>
                         <p>Throughout my academic journey, I’ve led multiple projects focused on sales forecasting, inventory optimization, and loan approval predictions, applying machine learning techniques and data visualization tools to solve real-world business problems.</p>
-                        <p>I’m driven by curiosity and a commitment to continuous learning, always eager to leverage data to create meaningful impact. Feel free to connect with me to discuss data, technology, or exciting opportunities!</p>
                     </div>
                 </div>
             </div>
@@ -337,14 +353,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item">
-                        <div class="section-box">
-                            <img src="https://img.icons8.com/color/48/000000/outlook.png" alt="Outlook">
-                            <p>Outlook</p>
-                        </div>
-                    </div>
-                </div>
                 <!-- Row 3 -->
                 <div class="col-md-2 col-sm-4 col-6">
                     <div class="skill-item">
@@ -375,14 +383,6 @@
                         <div class="section-box">
                             <img src="https://img.icons8.com/color/48/000000/jupyter.png" alt="Jupyter Notebook">
                             <p>Jupyter Notebook</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-6">
-                    <div class="skill-item">
-                        <div class="section-box">
-                            <img src="https://img.icons8.com/color/48/000000/power-query.png" alt="Power Query">
-                            <p>Power Query</p>
                         </div>
                     </div>
                 </div>
@@ -458,20 +458,33 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="section-box">
-                        <h5>Predicting Viable Loan Applicants for Enhanced Secondary Approvals</h5>
-                        <p>Predicted approval likelihood for Tier 2 companies using logistic regression (90% accuracy). Applied multiple regression analysis to assess loan amounts based on income and credit history. Implemented data cleaning, feature encoding, and scaling to enhance model performance.</p>
+                        <h5><strong>Predicting Viable Loan Applicants for Enhanced Secondary Approvals</strong></h5>
+                        <ul>
+                            <li>Predicted approval likelihood for Tier 2 companies using logistic regression (90% accuracy).</li>
+                            <li>Applied multiple regression analysis to assess loan amounts based on income and credit history.</li>
+                            <li>Implemented data cleaning, feature encoding, and scaling to enhance model performance.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="section-box">
-                        <h5>Sales Forecasting and Inventory Optimization</h5>
-                        <p>Developed a sales forecasting model using Python, achieving 95% accuracy in predicting future sales. Designed an inventory optimization system to calculate reorder points, safety stock, and reduce inventory costs by 15%. Created an interactive dashboard in Power BI to visualize sales trends and inventory levels.</p>
+                        <h5><strong>Sales Forecasting and Inventory Optimization</strong></h5>
+                        <ul>
+                            <li>Developed a sales forecasting model using Python, achieving 95% accuracy in predicting future sales.</li>
+                            <li>Designed an inventory optimization system to calculate reorder points, safety stock, and reduce inventory costs by 15%.</li>
+                            <li>Created an interactive dashboard in Power BI to visualize sales trends and inventory levels.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="section-box">
-                        <h5>Supply Chain and Inventory Analysis Using SQL and Excel</h5>
-                        <p>Conducted end-to-end analysis of e-commerce data to identify inventory and supply chain inefficiencies. Wrote complex SQL queries to calculate turnover, analyze lead times, and segment customers. Designed interactive Excel dashboards to visualize stockout rates, sales trends, and supplier performance. Delivered insights to reduce overstocking by 15% and improve lead times by 20%.</p>
+                        <h5><strong>Supply Chain and Inventory Analysis Using SQL and Excel</strong></h5>
+                        <ul>
+                            <li>Conducted end-to-end analysis of e-commerce data to identify inventory and supply chain inefficiencies.</li>
+                            <li>Wrote complex SQL queries to calculate turnover, analyze lead times, and segment customers.</li>
+                            <li>Designed interactive Excel dashboards to visualize stockout rates, sales trends, and supplier performance.</li>
+                            <li>Delivered insights to reduce overstocking by 15% and improve lead times by 20%.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -499,6 +512,24 @@
                     <div class="section-box">
                         <h5>Data Visualization with Excel and Cognos</h5>
                         <p>IBM Skills Network</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="connect" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Connect</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="section-box text-center">
+                        <div class="connect-icons">
+                            <a href="https://www.linkedin.com/in/preeti-lokhande" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/preeti-lokhande" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="mailto:preeti.lokhande@example.com"><i class="fas fa-envelope"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
