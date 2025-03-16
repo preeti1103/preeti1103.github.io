@@ -119,6 +119,43 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
+        /* About Section */
+        #about {
+            padding: 80px 0;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        #about .skills {
+            margin-top: 20px;
+        }
+
+        #about .skills h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        #about .skills ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        #about .skills li {
+            background: #f4f4f4;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
         /* Contact Section */
         #contact {
             background: var(--dark-lavender);
@@ -164,6 +201,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
@@ -183,6 +221,33 @@
                 <p class="lead fade-in animate-delay-1">Data Analyst | Cloud Enthusiast</p>
                 <p class="lead fade-in animate-delay-2">Master’s in Information Systems, University of Texas at Arlington</p>
                 <a href="#about" class="btn btn-light btn-lg fade-in animate-delay-2">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">About Me</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="skill-card fade-in">
+                        <h5>Who Am I?</h5>
+                        <p>I am a data-driven Business Analyst with expertise in SQL, Excel, Python, and data visualization tools like Tableau and Power BI. I specialize in analyzing complex datasets, identifying inefficiencies, and delivering actionable insights to optimize business processes. With a strong background in inventory management, sales forecasting, and supply chain optimization, I am passionate about using data to drive decision-making and improve customer satisfaction.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mx-auto">
+                    <div class="skill-card fade-in animate-delay-1">
+                        <h5>My Skills</h5>
+                        <ul>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>Excel</li>
+                            <li>Tableau</li>
+                            <li>Power BI</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
