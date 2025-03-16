@@ -30,29 +30,9 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
         .fade-in {
             opacity: 0;
             animation: fadeIn 1s ease-in-out forwards;
-        }
-
-        .slide-in-left {
-            opacity: 0;
-            animation: slideInLeft 1s ease-in-out forwards;
-        }
-
-        .slide-in-right {
-            opacity: 0;
-            animation: slideInRight 1s ease-in-out forwards;
         }
 
         .animate-delay-1 {
@@ -91,34 +71,6 @@
             animation: fadeIn 1.5s ease-in-out forwards;
         }
 
-        .home-content .btn {
-            animation: fadeIn 2s ease-in-out forwards;
-        }
-
-        /* Section Titles */
-        .section-title {
-            font-weight: 600;
-            color: var(--dark-lavender);
-            margin-bottom: 2rem;
-            opacity: 0;
-            animation: fadeIn 1s ease-in-out forwards;
-        }
-
-        /* Skill Cards */
-        .skill-card {
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
-            padding: 20px;
-            transition: transform 0.3s;
-            opacity: 0;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
         /* About Section */
         #about {
             padding: 80px 0;
@@ -134,33 +86,91 @@
             margin-bottom: 20px;
         }
 
-        #about .skills {
-            margin-top: 20px;
+        /* Skills Section */
+        #skills {
+            padding: 80px 0;
+            background: #f9f9f9;
         }
 
-        #about .skills h3 {
-            font-size: 1.5rem;
+        #skills h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .skill-item {
+            text-align: center;
+            margin-bottom: 20px;
+            opacity: 0;
+        }
+
+        .skill-item img {
+            width: 80px;
+            height: 80px;
             margin-bottom: 10px;
         }
 
-        #about .skills ul {
-            list-style: none;
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
+        /* Education Section */
+        #education {
+            padding: 80px 0;
         }
 
-        #about .skills li {
-            background: #f4f4f4;
-            padding: 10px 20px;
-            border-radius: 5px;
+        #education h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
 
-        /* Contact Section */
-        #contact {
-            background: var(--dark-lavender);
-            color: white;
-            padding: 50px 0;
+        .education-item {
+            margin-bottom: 30px;
+        }
+
+        /* Experience Section */
+        #experience {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        #experience h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+        }
+
+        .experience-item img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        /* Projects Section */
+        #projects {
+            padding: 80px 0;
+        }
+
+        #projects h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .project-item {
+            margin-bottom: 30px;
+        }
+
+        /* Certifications Section */
+        #certifications {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        #certifications h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .certification-item {
+            margin-bottom: 20px;
         }
 
         /* Footer */
@@ -169,25 +179,6 @@
             color: white;
             padding: 20px 0;
             text-align: center;
-        }
-
-        /* Navigation Bar */
-        .navbar {
-            background: white !important;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar-brand {
-            font-weight: 600;
-            color: var(--dark-lavender) !important;
-        }
-
-        .nav-link {
-            color: var(--dark-lavender) !important;
-        }
-
-        .nav-link:hover {
-            color: var(--lavender) !important;
         }
     </style>
 </head>
@@ -202,11 +193,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
                 </ul>
             </div>
         </div>
@@ -220,7 +211,6 @@
                 <h1 class="display-4 fade-in">Preeti Lokhande</h1>
                 <p class="lead fade-in animate-delay-1">Data Analyst | Cloud Enthusiast</p>
                 <p class="lead fade-in animate-delay-2">Master’s in Information Systems, University of Texas at Arlington</p>
-                <a href="#about" class="btn btn-light btn-lg fade-in animate-delay-2">Learn More</a>
             </div>
         </div>
     </section>
@@ -230,22 +220,120 @@
         <div class="container">
             <h2 class="section-title text-center">About Me</h2>
             <div class="row">
-                <div class="col-md-6 mx-auto">
-                    <div class="skill-card fade-in">
-                        <h5>Who Am I?</h5>
+                <div class="col-md-8 mx-auto">
+                    <div class="fade-in">
                         <p>I am a data-driven Business Analyst with expertise in SQL, Excel, Python, and data visualization tools like Tableau and Power BI. I specialize in analyzing complex datasets, identifying inefficiencies, and delivering actionable insights to optimize business processes. With a strong background in inventory management, sales forecasting, and supply chain optimization, I am passionate about using data to drive decision-making and improve customer satisfaction.</p>
                     </div>
                 </div>
-                <div class="col-md-6 mx-auto">
-                    <div class="skill-card fade-in animate-delay-1">
-                        <h5>My Skills</h5>
-                        <ul>
-                            <li>Python</li>
-                            <li>SQL</li>
-                            <li>Excel</li>
-                            <li>Tableau</li>
-                            <li>Power BI</li>
-                        </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Skills</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="skill-item fade-in">
+                        <img src="https://img.icons8.com/color/96/000000/python.png" alt="Python">
+                        <p>Python</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in animate-delay-1">
+                        <img src="https://img.icons8.com/color/96/000000/sql.png" alt="SQL">
+                        <p>SQL</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in animate-delay-2">
+                        <img src="https://img.icons8.com/color/96/000000/matlab.png" alt="MATLAB">
+                        <p>MATLAB</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in">
+                        <img src="https://img.icons8.com/color/96/000000/mysql.png" alt="MySQL">
+                        <p>MySQL</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in animate-delay-1">
+                        <img src="https://img.icons8.com/color/96/000000/sql-server.png" alt="SQL Server">
+                        <p>SQL Server</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in animate-delay-2">
+                        <img src="https://img.icons8.com/color/96/000000/mongodb.png" alt="MongoDB">
+                        <p>MongoDB</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in">
+                        <img src="https://img.icons8.com/color/96/000000/ms-excel.png" alt="Excel">
+                        <p>Excel</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in animate-delay-1">
+                        <img src="https://img.icons8.com/color/96/000000/ms-word.png" alt="Word">
+                        <p>Word</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in animate-delay-2">
+                        <img src="https://img.icons8.com/color/96/000000/powerpoint.png" alt="PowerPoint">
+                        <p>PowerPoint</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in">
+                        <img src="https://img.icons8.com/color/96/000000/ms-access.png" alt="Access">
+                        <p>Access</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in animate-delay-1">
+                        <img src="https://img.icons8.com/color/96/000000/visio.png" alt="Visio">
+                        <p>Visio</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in animate-delay-2">
+                        <img src="https://img.icons8.com/color/96/000000/outlook.png" alt="Outlook">
+                        <p>Outlook</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in">
+                        <img src="https://img.icons8.com/color/96/000000/tableau-software.png" alt="Tableau">
+                        <p>Tableau</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in animate-delay-1">
+                        <img src="https://img.icons8.com/color/96/000000/power-bi.png" alt="Power BI">
+                        <p>Power BI</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in animate-delay-2">
+                        <img src="https://img.icons8.com/color/96/000000/git.png" alt="Git">
+                        <p>Git</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in">
+                        <img src="https://img.icons8.com/color/96/000000/jupyter.png" alt="Jupyter Notebook">
+                        <p>Jupyter Notebook</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-item fade-in animate-delay-1">
+                        <img src="https://img.icons8.com/color/96/000000/power-query.png" alt="Power Query">
+                        <p>Power Query</p>
                     </div>
                 </div>
             </div>
@@ -258,7 +346,7 @@
             <h2 class="section-title text-center">Education</h2>
             <div class="row">
                 <div class="col-md-6 mx-auto">
-                    <div class="skill-card fade-in">
+                    <div class="education-item fade-in">
                         <h5>Master’s in Information Systems</h5>
                         <p>University of Texas at Arlington, USA</p>
                         <p><strong>Expected Graduation:</strong> May 2025</p>
@@ -266,49 +354,11 @@
                     </div>
                 </div>
                 <div class="col-md-6 mx-auto">
-                    <div class="skill-card fade-in animate-delay-1">
+                    <div class="education-item fade-in animate-delay-1">
                         <h5>Bachelor of Engineering in Electronics and Telecommunications</h5>
                         <p>Mumbai University, Mumbai, India</p>
                         <p><strong>Graduated:</strong> June 2021</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center">Skills</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="skill-card fade-in">
-                        <h5>Languages</h5>
-                        <p>Python, SQL, MATLAB</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-card fade-in animate-delay-1">
-                        <h5>Databases</h5>
-                        <p>MySQL, SQL Server, MongoDB</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-card fade-in animate-delay-2">
-                        <h5>Office Suite</h5>
-                        <p>Excel, Word, PowerPoint, Access, Visio, Outlook</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-card fade-in">
-                        <h5>Analytical Tools</h5>
-                        <p>Tableau, Power BI, Excel</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-card fade-in animate-delay-1">
-                        <h5>Other Tools</h5>
-                        <p>Git, Jupyter Notebook, Power Query</p>
+                        <p><strong>Relevant Coursework:</strong> Digital system and design, Network communication, database management, python</p>
                     </div>
                 </div>
             </div>
@@ -316,13 +366,16 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-5">
+    <section id="experience" class="py-5 bg-light">
         <div class="container">
             <h2 class="section-title text-center">Experience</h2>
             <div class="row g-4">
                 <div class="col-md-6">
-                    <div class="skill-card fade-in">
-                        <h5>Analyst</h5>
+                    <div class="experience-item fade-in">
+                        <div class="d-flex align-items-center">
+                            <img src="https://via.placeholder.com/50" alt="Chartwells Logo">
+                            <h5>Analyst</h5>
+                        </div>
                         <p><strong>Chartwells Higher Education - Arlington, TX, USA</strong></p>
                         <p><strong>Jan 2024 - Present</strong></p>
                         <ul>
@@ -332,8 +385,11 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="skill-card fade-in animate-delay-1">
-                        <h5>Data Analyst Intern</h5>
+                    <div class="experience-item fade-in animate-delay-1">
+                        <div class="d-flex align-items-center">
+                            <img src="https://via.placeholder.com/50" alt="Doordarshan Logo">
+                            <h5>Data Analyst Intern</h5>
+                        </div>
                         <p><strong>Doordarshan Kendra, Mumbai, India</strong></p>
                         <p><strong>Jun 2022 - Aug 2023</strong></p>
                         <ul>
@@ -347,38 +403,56 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-light">
+    <section id="projects" class="py-5">
         <div class="container">
             <h2 class="section-title text-center">Projects</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="skill-card fade-in">
+                    <div class="project-item fade-in">
                         <h5>Supply Chain and Inventory Optimization Analysis</h5>
                         <p>Analyzed e-commerce data using SQL and Excel to optimize inventory and improve supply chain efficiency.</p>
-                        <a href="https://github.com/preeti1103/Supply-Chain-Inventory-Analysis" class="btn btn-primary" target="_blank">View on GitHub</a>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="skill-card fade-in animate-delay-1">
+                    <div class="project-item fade-in animate-delay-1">
                         <h5>Sales Forecasting and Inventory Optimization</h5>
                         <p>Developed a sales forecasting model using Python, achieving 95% accuracy in predicting future sales.</p>
-                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-item fade-in animate-delay-2">
+                        <h5>Customer Churn Prediction</h5>
+                        <p>Built a predictive model to identify customers likely to churn.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container text-center">
-            <h2 class="section-title">Contact Me</h2>
-            <p class="lead">Let's connect and discuss opportunities!</p>
-            <ul class="list-unstyled">
-                <li><a href="mailto:preetilokhande999@gmail.com" class="text-white">preetilokhande999@gmail.com</a></li>
-                <li><a href="https://www.linkedin.com/in/preeti-lokhande" class="text-white">LinkedIn</a></li>
-                <li><a href="https://github.com/preeti1103" class="text-white">GitHub</a></li>
-            </ul>
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Certifications</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="certification-item fade-in">
+                        <h5>Data Analysis with Python</h5>
+                        <p>IBM Skills Network</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="certification-item fade-in animate-delay-1">
+                        <h5>Excel Basics for Data Analysis</h5>
+                        <p>IBM Skills Network</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="certification-item fade-in animate-delay-2">
+                        <h5>Data Visualization with Excel and Cognos</h5>
+                        <p>IBM Skills Network</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -393,7 +467,7 @@
     <script>
         // Add scroll-triggered animations
         document.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+            const sections = document.querySelectorAll('.fade-in');
             sections.forEach(section => {
                 const sectionTop = section.getBoundingClientRect().top;
                 if (sectionTop < window.innerHeight * 0.8) {
