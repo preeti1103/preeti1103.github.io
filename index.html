@@ -30,8 +30,37 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
         .fade-in {
-            animation: fadeIn 1s ease-in-out;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            animation: slideInLeft 1s ease-in-out forwards;
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            animation: slideInRight 1s ease-in-out forwards;
+        }
+
+        .animate-delay-1 {
+            animation-delay: 0.5s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 1s;
         }
 
         /* Home Section */
@@ -51,11 +80,19 @@
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid white;
-            animation: fadeIn 1.5s ease-in-out;
+            animation: fadeIn 1.5s ease-in-out forwards;
         }
 
-        .home-content {
-            animation: fadeIn 2s ease-in-out;
+        .home-content h1 {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .home-content p {
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        .home-content .btn {
+            animation: fadeIn 2s ease-in-out forwards;
         }
 
         /* Section Titles */
@@ -63,7 +100,8 @@
             font-weight: 600;
             color: var(--dark-lavender);
             margin-bottom: 2rem;
-            animation: fadeIn 1s ease-in-out;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
         }
 
         /* Skill Cards */
@@ -73,6 +111,7 @@
             border-radius: 10px;
             padding: 20px;
             transition: transform 0.3s;
+            opacity: 0;
         }
 
         .skill-card:hover {
@@ -141,9 +180,9 @@
             <img src="https://i.postimg.cc/ZKv5ZGNf/Whats-App-Image-2025-03-05-at-21-33-51-777943f8.jpg" alt="Profile" class="profile-img mb-4">
             <div class="home-content">
                 <h1 class="display-4 fade-in">Preeti Lokhande</h1>
-                <p class="lead fade-in">Data Analyst | Cloud Enthusiast</p>
-                <p class="lead fade-in">Master’s in Information Systems, University of Texas at Arlington</p>
-                <a href="#about" class="btn btn-light btn-lg fade-in">Learn More</a>
+                <p class="lead fade-in animate-delay-1">Data Analyst | Cloud Enthusiast</p>
+                <p class="lead fade-in animate-delay-2">Master’s in Information Systems, University of Texas at Arlington</p>
+                <a href="#about" class="btn btn-light btn-lg fade-in animate-delay-2">Learn More</a>
             </div>
         </div>
     </section>
@@ -162,7 +201,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 mx-auto">
-                    <div class="skill-card fade-in">
+                    <div class="skill-card fade-in animate-delay-1">
                         <h5>Bachelor of Engineering in Electronics and Telecommunications</h5>
                         <p>Mumbai University, Mumbai, India</p>
                         <p><strong>Graduated:</strong> June 2021</p>
@@ -184,13 +223,13 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="skill-card fade-in">
+                    <div class="skill-card fade-in animate-delay-1">
                         <h5>Databases</h5>
                         <p>MySQL, SQL Server, MongoDB</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="skill-card fade-in">
+                    <div class="skill-card fade-in animate-delay-2">
                         <h5>Office Suite</h5>
                         <p>Excel, Word, PowerPoint, Access, Visio, Outlook</p>
                     </div>
@@ -202,7 +241,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="skill-card fade-in">
+                    <div class="skill-card fade-in animate-delay-1">
                         <h5>Other Tools</h5>
                         <p>Git, Jupyter Notebook, Power Query</p>
                     </div>
@@ -228,7 +267,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="skill-card fade-in">
+                    <div class="skill-card fade-in animate-delay-1">
                         <h5>Data Analyst Intern</h5>
                         <p><strong>Doordarshan Kendra, Mumbai, India</strong></p>
                         <p><strong>Jun 2022 - Aug 2023</strong></p>
@@ -255,7 +294,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="skill-card fade-in">
+                    <div class="skill-card fade-in animate-delay-1">
                         <h5>Sales Forecasting and Inventory Optimization</h5>
                         <p>Developed a sales forecasting model using Python, achieving 95% accuracy in predicting future sales.</p>
                         <a href="#" class="btn btn-primary">View Project</a>
@@ -285,5 +324,19 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS for Scroll Animations -->
+    <script>
+        // Add scroll-triggered animations
+        document.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight * 0.8) {
+                    section.style.opacity = 1;
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
